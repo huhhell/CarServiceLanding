@@ -221,15 +221,116 @@
 }
 
 .cases {
-  &__container {}
+  background-color: #fff;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  border-radius: 32px;
 
-  &__title {}
+  &__container {
+    padding: 80px;
+  }
 
-  &__arrows {}
+  &__title {
+    display: inline-block;
+    font-size: 56px;
+    font-weight: 600;
+    line-height: 110%;
+  }
 
-  &__arrow-left {}
+  &__arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+  }
 
-  &__arrow-right {}
+  &__arrow-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin: 0 24px 0 0;
 
-  &__arrow-active {}
+    img {
+      width: 12px;
+    }
+  }
+
+  &__arrow-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background-color: #FF001D;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+
+
+    img {
+      width: 12px;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+  &__case {
+    position: relative;
+    margin: 50px 48px 0 0;
+    flex: 0 0 23%;
+  }
+
+  &__case-image {
+    width: 100%;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__case-count {
+    position: absolute;
+    top: 20px;
+    right: 32px;
+    width: 55px;
+    background-color: #000;
+    color: #fff;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 140%;
+    text-align: center;
+    padding: 5px;
+  }
+
+  &__case-description {
+    margin: 24px 0 22px 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  &__case-service-button {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+
+    button {
+      width: 100%;
+      background-color: #fff;
+      text-align: left;
+    }
+    img {
+      float: right;
+    }
+  }
 }
