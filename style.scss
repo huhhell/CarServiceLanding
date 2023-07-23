@@ -60,10 +60,18 @@
 
     &__nav-item {
       display: inline-block;
-      font-size: 16px;
-      font-weight: 500;
-      color: #fff;
-      line-height: 140%;
+
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        line-height: 140%;
+      }
+      
+      a:hover {
+        color: #FF001D;
+        text-decoration: underline;
+      }
     }
 
     &__phone {
@@ -103,21 +111,6 @@
     display: flex;
     justify-content: space-between;
     width: 550px;
-  }
-
-  &__button-appointment {
-
-    button {
-      background-color: #FF001D;
-      -webkit-border-radius: 16px;
-      -moz-border-radius: 16px;
-      border-radius: 16px;
-      width: 250px;
-      padding: 24px 0;
-    }
-  }
-
-  &__button-consult {
 
     button {
       background-color: transparent;
@@ -127,10 +120,25 @@
       border-radius: 16px;
       width: 250px;
       padding: 24px 0;
+    }
+  }
 
-      img {
-        width: 24px;
-      }
+  &__button-appointment {
+
+    button {
+      background-color: #FF001D;
+      border: none;
+    }
+    button:hover {
+      background-color: transparent;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+  }
+
+  &__button-consult {
+    button:hover {
+      border: 2px solid #FF001D;
+      background-color: #FF001D;
     }
   }
 
@@ -337,8 +345,13 @@
 
     button {
       width: 100%;
+      padding: 5px 0;
       background-color: #fff;
       text-align: left;
+    }
+
+    button:hover {
+      border-bottom: 1px solid #bdbdbd;
     }
 
     img {
@@ -430,7 +443,7 @@
 
   &__title {
     font-size: 56px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 110%;
     color: #ffffff;
   }
@@ -451,30 +464,24 @@
     button {
       width: 100%;
       padding: 24px 48px;
+      background-color: transparent;
+      color: #ffffff;
       font-size: 18px;
       font-weight: 600;
       line-height: 120%;
+      border: 1px solid #fff;
       -webkit-border-radius: 16px;
       -moz-border-radius: 16px;
       border-radius: 16px;
     }
-  }
 
-  &__button-appointment {
-    flex: 0 0 48%;
-
-    button {
-      background-color: #ffffff;
+    button:hover {
+      background-color: #fff;
+      color: #000;
     }
-  }
 
-  &__button-consult {
-    flex: 0 0 48%;
-
-    button {
-      background-color: transparent;
-      color: #ffffff;
-      border: 1px solid #fff;
+    & > div {
+      flex: 0 0 48%;
     }
   }
 
@@ -494,11 +501,8 @@
     margin: 0 0 50px 0;
   }
 
-  &__advantages-image {
-  }
-
   &__advantages-title {
-    margin: 32px 0 24px 0;
+    margin: 20px 0;
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 700;

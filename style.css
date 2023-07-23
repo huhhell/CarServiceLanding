@@ -52,10 +52,16 @@
 }
 .main .header__nav-item {
   display: inline-block;
+}
+.main .header__nav-item a {
   font-size: 16px;
   font-weight: 500;
   color: #fff;
   line-height: 140%;
+}
+.main .header__nav-item a:hover {
+  color: #FF001D;
+  text-decoration: underline;
 }
 .main .header__phone {
   margin: 0 0 0 7%;
@@ -89,15 +95,7 @@
   justify-content: space-between;
   width: 550px;
 }
-.main__button-appointment button {
-  background-color: #FF001D;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  border-radius: 16px;
-  width: 250px;
-  padding: 24px 0;
-}
-.main__button-consult button {
+.main__buttons button {
   background-color: transparent;
   border: 2px solid rgba(255, 255, 255, 0.2);
   -webkit-border-radius: 16px;
@@ -106,8 +104,17 @@
   width: 250px;
   padding: 24px 0;
 }
-.main__button-consult button img {
-  width: 24px;
+.main__button-appointment button {
+  background-color: #FF001D;
+  border: none;
+}
+.main__button-appointment button:hover {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+.main__button-consult button:hover {
+  border: 2px solid #FF001D;
+  background-color: #FF001D;
 }
 .main__button-text {
   padding: 4px;
@@ -282,8 +289,12 @@
 }
 .cases__case-service-button button {
   width: 100%;
+  padding: 5px 0;
   background-color: #fff;
   text-align: left;
+}
+.cases__case-service-button button:hover {
+  border-bottom: 1px solid #bdbdbd;
 }
 .cases__case-service-button img {
   float: right;
@@ -346,7 +357,7 @@
 }
 .about__title {
   font-size: 56px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 110%;
   color: #ffffff;
 }
@@ -365,26 +376,22 @@
 .about__buttons button {
   width: 100%;
   padding: 24px 48px;
+  background-color: transparent;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 600;
   line-height: 120%;
+  border: 1px solid #fff;
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
   border-radius: 16px;
 }
-.about__button-appointment {
+.about__buttons button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.about__buttons > div {
   flex: 0 0 48%;
-}
-.about__button-appointment button {
-  background-color: #ffffff;
-}
-.about__button-consult {
-  flex: 0 0 48%;
-}
-.about__button-consult button {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #fff;
 }
 .about__advantages {
   flex: 0 0 50%;
@@ -400,7 +407,7 @@
   margin: 0 0 50px 0;
 }
 .about__advantages-title {
-  margin: 32px 0 24px 0;
+  margin: 20px 0;
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 700;
